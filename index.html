@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>DISTRIBUTOR PERKAKAS</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-image: url(https://plus.unsplash.com/premium_photo-1670179694048-5e4a1dcad9b6?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+      );
+    }
+
+    @keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.3s;
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .btn-shopee {
+    width: 50%;
+  }
+}    
+    .scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.scroll.muncul {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    /* ANIMASI CARD MUNCUL */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeUp 3s ease;
+}
+    /* HEADER */
+    .header {
+      background-color: #ee4d2d;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    
+    }
+
+    .fade {
+  animation: fadeIn 10s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+} 
+
+    /* CONTAINER */
+    .container {
+      width: 90%;
+      margin: 30px auto;
+    }
+
+    /* GRID PRODUK */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    /* CARD PRODUK */
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 20px 6px rgba(236, 115, 1, 0.1);
+    }
+    .card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin: 10px 0;
+      font-style: italic;
+      animation-play-state: running;
+    }
+
+    /* TOMBOL SHOPEE */
+    .btn-shopee {
+      display: inline-block;
+      background-color: hsl(10, 92%, 59%);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 10px;
+      transition: 1s;
+    }
+
+    .btn-shopee {
+  transition: 1s;
+}
+
+.btn-shopee:hover {
+  transform: scale(1.08);
+}
+    .btn-shopee:hover {
+      background-color: #3307f5;
+    }
+
+    @keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.3s;
+}
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #222;
+      color: white;
+      margin-top: 30px;
+    }
+    .fade {
+  animation: fadeIn 3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / LANDING -->
+  <div class="header fade" class="card scroll">
+    <h1>Produk Pilihan Terbaik</h1>
+    <p>Belanja Aman & Cepat</p>
+    <p>Total klik Shopee: <span id="klik">0</span></p>
+  </div>
+
+  <!-- PRODUK -->
+  <div class="container">
+    <div class="grid">
+
+      <!-- SalamPERKAKAS -->
+      <div class="card">
+        <img src="Screenshot 2026-02-06 143234.jpeg" alt="SALAMperkakas">
+        <h3>SALAMperkakas</h3>
+        <a href="https://shopee.co.id/salamperkakas"
+           target="_blank"
+           class="btn-shopee"
+           onclick="tambahKlik()">
+           Beli di Shopee
+        </a>
+      </div>
+
+      <!-- Telesales -->
+      <div class="card">
+        <img src="whatsapp-business-app-icon-transparent-background-free-png.png" alt="Telesales">
+        <h3>Whatsapp Telesales</h3>
+        <a href="https://wa.me/6283870106324"
+           target="_blank"
+           class="btn-shopee"
+           onclick="tambahKlik()">
+           Klik disini
+        </a>
+      </div>
+
+      <!-- Alamat Toko -->
+      <div class="card">
+        <img src="Screenshot 2026-02-06 154221.jpeg" alt="Alamat Toko">
+        <h3>Alamat Toko</h3>
+        <a href="https://maps.app.goo.gl/QWSdUhigd5WnXSDp7"
+           target="_blank"
+           class="btn-shopee"
+           onclick="tambahKlik()">
+           Klik disini
+        </a>
+      </div>
+
+ <!-- Produk -->
+      <div class="card">
+        <img src="Screenshot 2026-02-06 175158.jpeg" alt="Produk">
+        <h3>Produk</h3>
+        <a href="https://shopee.co.id/salamperkakas#product_list"
+           target="_blank"
+           class="btn-shopee"
+           onclick="tambahKlik()">
+           Klik disini
+        </a>
+      </div>     
+    
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 | Landing Page HMH Sukses Makmur
+  </div>
+
+  <!-- JAVASCRIPT TRACKING -->
+  <script>
+    let totalKlik = 0;
+
+    function tambahKlik() {
+      totalKlik++;
+      document.getElementById("klik").innerText = totalKlik;
+    }
+  </script>
+<script>
+  const items = document.querySelectorAll(".scroll");
+
+  window.addEventListener("scroll", () => {
+    items.forEach(item => {
+      const posisi = item.getBoundingClientRect().top;
+      const layar = window.innerHeight;
+      if (posisi < layar - 50) {
+        item.classList.add("muncul");
+      }
+    });
+  });
+</script>
+</body>
+</html>
